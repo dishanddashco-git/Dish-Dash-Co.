@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Dish & Dash</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url(images/aesthetic-background.png.png);">
+
+<!-- NAVBAR -->
+<nav>
+  <h1>Dish & Dash Contact</h1>
+  <a href="index.html" class="back-btn">← Home</a>
+</nav>
+
+<!-- CONTACT -->
+<section class="contact">
+
+  <div class="contact-container">
+
+    <!-- LEFT -->
+    <div class="contact-info glass fade-in">
+      <h2>Let’s Talk 💬</h2>
+      <p>Healthy eating made simple. Reach out anytime.</p>
+
+      <div class="info-box">
+        <p>📍 Durban & Pietermaritzburg</p>
+        <p>📞 066 523 3973</p>
+        <p>💬 076 7786 852</p>
+      </div>
+
+      <!-- SOCIALS -->
+      <div class="socials">
+        <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <a href="https://wa.me/27767786852" target="_blank" class="whatsapp-btn">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form glass fade-in">
+      <h2>Send Message</h2>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <textarea id="message" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MAP -->
+<section class="map fade-in">
+  <iframe 
+    src="https://maps.google.com/maps?q=Durban&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/27767786852" class="floating-whatsapp" target="_blank">
+  💬
+</a>
+
+<!-- SCRIPT -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  let text = `Hello Dish & Dash,%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Message: ${message}`;
+
+  window.open(`https://wa.me/27767786852?text=${text}`, "_blank");
+});
+</script>
+
+</body>
+</html>

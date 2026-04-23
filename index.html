@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dish & Dash Co.</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url(images/aesthetic-background.png.png);">
+
+<nav>
+  <h1>Dish & Dash Co.</h1>
+  
+  <div class="nav-buttons">
+    <a href="viewmenu.html" class="btn">View Menu</a>
+    <a href="#order" class="btn">Order Now</a>
+    <a href="contact.html" class="btn">Contact me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h2>Healthy Meals Made Easy</h2>
+    <p>No prep. No stress. No mess.</p>
+    <a href="https://wa.me/27767786852" target="_blank" class="whatsapp-btn">
+      💬 Order on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer">
+  <div class="price"> 10 Meals for R800</div>
+  <br><br>
+  <p class="price" style="color: white;">Perfect for busy lifestyles, fitness goals & healthy eating.</p>
+</section>
+
+<!-- MENU -->
+<section class="menu">
+
+  <div class="card">
+    <h3>🥣 Soups</h3>
+    <ul>
+      <li>Chicken & Mushroom</li>
+      <li>Chicken & Corn</li>
+      <li>Chunky Veg Chicken</li>
+      <li>Old Style Chicken Soup</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🍗 Chicken</h3>
+    <ul>
+      <li>Stir-fry + Quinoa</li>
+      <li>Tandoori + Rice</li>
+      <li>Green Kebabs</li>
+      <li>Chicken Curry</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🥩 Beef</h3>
+    <ul>
+      <li>Beef Stir-fry</li>
+      <li>Beef Curry</li>
+      <li>Garlic Herb Stew</li>
+      <li>Red Masala</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>🐟 Seafood</h3>
+    <p>Available on request</p>
+  </div>
+
+  <div class="card">
+    <h3>🥗 Vegetables</h3>
+    <p>Available on request</p>
+  </div>
+
+</section>
+
+<!-- ORDER FORM -->
+<section id="order" class="order">
+  <h2>Place Your Order</h2>
+
+  <form id="orderForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+
+    <textarea id="meals" placeholder="Enter your meal choices..." required></textarea>
+
+    <button type="submit">Send Order via WhatsApp</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📍 Durban & Pietermaritzburg deliveries</p>
+  <p>📞 066 523 3973</p>
+  <p>Whatsapp: 076 778 6852</p>
+</footer>
+
+<!-- FLOATING BUTTON -->
+<a href="https://wa.me/27767786852" class="floating-whatsapp" target="_blank">
+  💬
+</a>
+
+<!-- SCRIPT (WHATSAPP AUTO SEND) -->
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let meals = document.getElementById("meals").value;
+
+  let message = `Hello, I would like to order:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Meals: ${meals}`;
+
+  window.open(`https://wa.me/27767786852?text=${message}`, "_blank");
+});
+</script>
+
+</body>
+</html>
