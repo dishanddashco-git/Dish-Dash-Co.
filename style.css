@@ -508,24 +508,3 @@ footer p + p {
     grid-template-columns: 1fr;
   }
 }
-
-body{
-    margin:0;
-    height:100vh;
-    background: linear-gradient(-45deg, #0f172a, #1e293b, #134e4a, #0f766e);
-    background-size: 400% 400%;
-    animation: premiumMove 12s ease infinite;
-    font-family: Arial, sans-serif;
-}
-
-@keyframes premiumMove{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
-}
